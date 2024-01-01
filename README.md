@@ -20,7 +20,7 @@ HARRY MAGUIRE vs Cesar Azpilicueta
 The AI Video Assistant Referee System outputs the two most probable decisions after reviewing the clip, with the associated confidence score. Unfortunately, due to GitHub's limits on GIF size, you won't be able to quite make out the AI predicition on the right:
 
 * the AI model is 45% confident that the incident would be considered as 'no foul';
-* but also 41% confident that the incident is a 'foul but no card'.
+* but the model is also 41% confident that the incident is a 'foul but no card'.
   
 For those of you who have a good memory, this incident occurred during the 2020/21 season, and was ultimately given as 'no foul' by the referee at the time, Martin Atkinson, and further confirmed by the VAR system. That's not to say that this decision holds true and the system works, rather, highlighting the very fine lines between a penalty being given and not given, in this case a 4% difference. To aid the referee in their judgement, the model is also able to track specific offences to consider, such as, in this case, elbowing (55%) and pushing (20%). As you can see, the model probably wasn't trained on chokeholds.
 
