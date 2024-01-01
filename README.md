@@ -13,6 +13,7 @@ This repository contains:
 For more information
 * Paper: [VARS: Video Assistant Referee System for Automated Soccer Decision Making from Multiple Views](https://arxiv.org/abs/2304.04617).
 
+![HARRY MAGUIRE](https://github.com/ghchen99/VARS/assets/56446026/8cdb8a88-c19d-4fdc-b754-3d2872dff9bc)
 
 ![My Image](images/abstract_image.jpg)
 ## SoccerNet-MVFouls
@@ -98,7 +99,7 @@ Then select one or several clips in the folder "Dataset".
 ## Demo
 The VARS gives his top two predictions with the corresponding confidence score.
 
-![HARRY MAGUIRE](https://github.com/ghchen99/VARS/assets/56446026/8cdb8a88-c19d-4fdc-b754-3d2872dff9bc)
+
 
 ## License
 See the [License](LICENSE) file for details.
