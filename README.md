@@ -98,11 +98,7 @@ Then select one or several clips in the folder "Dataset".
 ## Demo
 The VARS gives his top two predictions with the corresponding confidence score.
 
-Example 1:
-![My Demo](images/HighLeg_RedCard_GIF.gif)
-
-Example 2:
-![My Demo](images/Tackling_YellowCard_GIF.gif)
+![HARRY MAGUIRE](https://github.com/ghchen99/VARS/assets/56446026/8cdb8a88-c19d-4fdc-b754-3d2872dff9bc)
 
 ## License
 See the [License](LICENSE) file for details.
