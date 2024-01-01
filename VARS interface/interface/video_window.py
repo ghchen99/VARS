@@ -44,10 +44,10 @@ class VideoWindow(QMainWindow):
         self.setWindowTitle("Video Assistent Referee System")
 
         path = os.path.join(rootdir, 'interface')
-        path_image = os.path.join(path, 'vars_logo.png')
+        path_image = os.path.join(path, 'VAR Logo.jpeg')
         path_image = path_image.replace('\\', '/' )
 
-        self.setStyleSheet("background: #0F0F65;")
+        self.setStyleSheet("background: #9552f7;")
 
         #######################
         # CREATE VIDEO WIDGETS#
@@ -137,10 +137,11 @@ class VideoWindow(QMainWindow):
         decisionLayout = QVBoxLayout()
         font = QFont('Arial', 20)
         font.setBold(True)
-        self.decisionTitle = QLabel("Groundtruth")
-        self.decisionTitle.setAlignment(Qt.AlignCenter)
-        self.decisionTitle.setFont(font)
-        self.decisionTitle.setStyleSheet("color: rgb(255,255,255)")
+        # self.decisionTitle = QLabel("Groundtruth")
+        # self.decisionTitle = QLabel("Decision pending...")
+        # self.decisionTitle.setAlignment(Qt.AlignCenter)
+        # self.decisionTitle.setFont(font)
+        # self.decisionTitle.setStyleSheet("color: rgb(255,255,255)")
 
         fontText = QFont('Arial', 14)
 
@@ -177,14 +178,30 @@ class VideoWindow(QMainWindow):
         self.prediction4Text.setAlignment(Qt.AlignCenter)
         self.prediction4Text.setFont(fontText)
 
-        self.predictionTitle = QLabel("VARS Prediction")
+        self.predictionTitle = QLabel("AI Prediction")
         self.predictionTitle.setFont(font)
         self.predictionTitle.setAlignment(Qt.AlignCenter)
         self.predictionTitle.setStyleSheet("color: rgb(255,255,255)")
 
 
         
-        decisionLayout.addWidget(self.decisionTitle)
+        #decisionLayout.addWidget(self.decisionTitle)
+        self.label = QLabel(self)
+
+        # Load the image
+        self.pixmap = QPixmap(path_image)
+
+        # Resize the image by a factor of 8
+        new_size = self.pixmap.size() / 8
+        self.pixmap = self.pixmap.scaled(new_size, Qt.KeepAspectRatio)
+
+        # Set the geometry to position the image 170 pixels from the right
+        screen_width = QApplication.desktop().screenGeometry().width()
+        self.label.setGeometry(QtCore.QRect(screen_width - 170 - new_size.width(), 0, new_size.width(), new_size.height()))
+
+        # Set the scaled pixmap to the label
+        self.label.setPixmap(self.pixmap)
+
         decisionLayout.addWidget(self.spacetext)
         decisionLayout.addWidget(self.offenceText)
         decisionLayout.addWidget(self.actionText)
@@ -251,7 +268,7 @@ class VideoWindow(QMainWindow):
         showVideoLayout.addWidget(self.showVid4)
         showVideoLayout.addWidget(self.showAllVid)
 
-        self.decisionTitle.hide()
+        #self.decisionTitle.hide()
         self.predictionTitle.hide()
         #self.MovieLabel.hide()
         self.showVid1.hide()
@@ -277,12 +294,20 @@ class VideoWindow(QMainWindow):
         # Set widget to contain window contents
         wid.setLayout(mainScreen)
 
-        # creating label
         self.label = QLabel(self)
-        self.label.setGeometry(QtCore.QRect(500, 0, 1000, 900))
-        # loading image
+
+        # Load the image
         self.pixmap = QPixmap(path_image)
-        # adding image to label
+
+        # Resize the image by a factor of 8
+        new_size = self.pixmap.size() / 8
+        self.pixmap = self.pixmap.scaled(new_size, Qt.KeepAspectRatio)
+
+        # Set the geometry to position the image 170 pixels from the right
+        screen_width = QApplication.desktop().screenGeometry().width()
+        self.label.setGeometry(QtCore.QRect(screen_width - 170 - new_size.width(), 0, new_size.width(), new_size.height()))
+
+        # Set the scaled pixmap to the label
         self.label.setPixmap(self.pixmap)
 
 
@@ -475,7 +500,7 @@ class VideoWindow(QMainWindow):
 
             self.files = files
             self.predictionTitle.hide()
-            self.decisionTitle.hide()
+            #self.decisionTitle.hide()
             self.showVid1.hide()
             self.showVid2.hide()
             self.showVid3.hide()
@@ -574,7 +599,7 @@ class VideoWindow(QMainWindow):
                     continue
                 w.show()
 
-            self.decisionTitle.show()
+            #self.decisionTitle.show()
             self.offenceText.show()
             self.predictionTitle.show()
 
@@ -620,6 +645,12 @@ class VideoWindow(QMainWindow):
     def setPosition(self, position):
         for i in self.mediaPlayers:
             i.setPosition(position)
+
+    def handleError(self):
+        self.playButton.setEnabled(False)
+        self.errorLabel.setText("Error: " + self.mediaPlayers[0].errorString())
+
+
 
     def handleError(self):
         self.playButton.setEnabled(False)
