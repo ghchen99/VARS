@@ -17,13 +17,14 @@ HARRY MAGUIRE vs Cesar Azpilicueta
 
 ![HARRY MAGUIRE](https://github.com/ghchen99/VARS/assets/56446026/8cdb8a88-c19d-4fdc-b754-3d2872dff9bc)
 
-The AI Video Assistant Referee System outputs the two most probable decisions after reviewing the clip, with the associated confidence score. Unfortunately, due to GitHub's limits on GIF size, you won't be able to quite make out the AI predicition on the right:
+The AI Video Assistant Referee System assesses the provided clip and generates the two most likely decisions, along with their respective confidence scores. Unfortunately, due to GitHub's limitations on GIF size, discerning the AI prediction on the right may be challenging.
 
-* the AI model is 45% confident that the incident would be considered as 'no foul';
-* but the model is also 41% confident that the incident is a 'foul but no card'.
-  
-For those of you who have a good memory, this incident occurred during the 2020/21 season, and was ultimately given as 'no foul' by the referee at the time, Martin Atkinson, and further confirmed by the VAR system. That's not to say that this decision holds true and the system works, rather, highlighting the very fine lines between a penalty being given and not given, in this case a 4% difference. To aid the referee in their judgement, the model is also able to track specific offences to consider, such as, in this case, elbowing (55%) and pushing (20%). As you can see, the model probably wasn't trained on chokeholds.
+* The AI model expresses a confidence level of 45% in categorizing the incident as 'no foul.'
+* Additionally, it indicates a 41% confidence in labeling the incident as a 'foul but no card.'
 
+Recalling the incident from the 2020/21 season, it was ultimately deemed a 'no foul' by the referee, Martin Atkinson, and later confirmed by the VAR system. It's essential to note that this confirmation doesn't necessarily validate the system's efficacy but underscores the nuanced distinction between awarding or not awarding a penalty, as evident in this case with a mere 4% difference.
+
+To assist referees in their decision-making, the model can identify specific offenses for consideration. In this instance, it highlights a 55% likelihood of elbowing and a 20% likelihood of pushing. Interestingly, the model's training data may not have included scenarios involving chokeholds, as evidenced by the absence of relevant information.
 
 
 ## SoccerNet-MVFouls
