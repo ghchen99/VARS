@@ -2,8 +2,7 @@
 
 This repository is forked from https://github.com/SoccerNet/VARS. 
 
-If you're looking for technical implementation details and academic background, I invite you to explore the paper published by Jan Held et al.: 
-* Paper: [VARS: Video Assistant Referee System for Automated Soccer Decision Making from Multiple Views](https://arxiv.org/abs/2304.04617).
+If you're looking for technical implementation details and academic background, I invite you to explore the paper published by Jan Held et al. [VARS: Video Assistant Referee System for Automated Soccer Decision Making from Multiple Views](https://arxiv.org/abs/2304.04617).
 
 This repository contains:
  * the SoccerNet-MVFouls, a new multi-view video dataset containing video clips of fouls captured by multiple cameras, annotated with 10 properties.
@@ -13,12 +12,19 @@ This repository contains:
 Note: I've chosen to omit the ground truth of the action in the updated UI, since this data would not be available in a live situation.
 
 ## Demo
-The AI Video Assistant Referee System outputs the two most probable decisions after reviewing the clip, with the associated confidence score. Unfortunately, due to GitHub's limits on GIF size, you won't be able to quite make out the AI predicition on the right:
-* the AI model is 45% confident that the incident would be considered as 'no foul';
-* but also 41% confident that the incident is a 'foul but no card'.
-For those of you who have a good memory, this incident occurred during the 2020/21 season, and was ultimately given as 'no foul' by the referee at the time, Martin Atkinson, and further confirmed by the VAR system. That's not to say that this decision holds true and the system works, rather, highlighting the very fine lines between a penalty being given and not given, in this case a 4% difference. To aid the referee in their judgement, the model is also able to track specific offences to consider, such as, in this case, elbowing (55%) and pushing (20%). As you can see, the model probably wasn't trained on chokeholds.
+
+HARRY MAGUIRE vs Cesar Azpilicueta
 
 ![HARRY MAGUIRE](https://github.com/ghchen99/VARS/assets/56446026/8cdb8a88-c19d-4fdc-b754-3d2872dff9bc)
+
+The AI Video Assistant Referee System outputs the two most probable decisions after reviewing the clip, with the associated confidence score. Unfortunately, due to GitHub's limits on GIF size, you won't be able to quite make out the AI predicition on the right:
+
+* the AI model is 45% confident that the incident would be considered as 'no foul';
+* but also 41% confident that the incident is a 'foul but no card'.
+  
+For those of you who have a good memory, this incident occurred during the 2020/21 season, and was ultimately given as 'no foul' by the referee at the time, Martin Atkinson, and further confirmed by the VAR system. That's not to say that this decision holds true and the system works, rather, highlighting the very fine lines between a penalty being given and not given, in this case a 4% difference. To aid the referee in their judgement, the model is also able to track specific offences to consider, such as, in this case, elbowing (55%) and pushing (20%). As you can see, the model probably wasn't trained on chokeholds.
+
+
 
 ## SoccerNet-MVFouls
 
