@@ -100,9 +100,9 @@ See the [License](LICENSE) file for details.
 
 ## Citation
 
-For further information check out our [paper](https://arxiv.org/abs/2304.04617) and supplementary material.
+For further information check out Jan's [paper](https://arxiv.org/abs/2304.04617) and supplementary material.
 
-Please cite our work if you use our dataset or code:
+Please cite their work if you use their dataset or code:
 ```
 @InProceedings{Held2023VARS,
     author    = {Held, Jan and Cioppa, Anthony and Giancola, Silvio and Hamdi, Abdullah and Ghanem, Bernard and Van Droogenbroeck, Marc},
