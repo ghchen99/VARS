@@ -1,21 +1,17 @@
-
-
 # AI Video Assistant Referee - Let's Save VAR!
 
-The Video Assistant Referee (VAR) has revolutionized association football, enabling referees to review incidents on the pitch, making informed decisions, and ensuring fairness. However, due to the lack of referees in many countries and the high cost of the VAR infrastructure, only professional leagues can benefit from it. 
-We propose a first step towards a fully automated “Video Assistant Referee System” (VARS) which could support or replace the current VAR.
-
-This repository contains:
- * the SoccerNet-MVFouls, a new multi-view video dataset containing video clips of fouls captured by multiple cameras, annotated with 10 properties.
- * the code for the VARS, a new multi-camera video recognition system for classifying the type of fouls and their severity. 
-* the VARS interface, which shows the ground truth of the action and the top 2 predictions for the foul classification task, and the offence and severity classification task with the corresponding confidence scores.
+This repository is forked from https://github.com/SoccerNet/VARS. If you're looking for technical implementation details and academic background, I invite you to explore the paper published by Jan Held et al. "VARS: Video Assistant Referee System for Automated Soccer Decision Making from Multiple Views". 
 
 For more information
 * Paper: [VARS: Video Assistant Referee System for Automated Soccer Decision Making from Multiple Views](https://arxiv.org/abs/2304.04617).
 
-![HARRY MAGUIRE](https://github.com/ghchen99/VARS/assets/56446026/8cdb8a88-c19d-4fdc-b754-3d2872dff9bc)
+This repository contains:
+ * the SoccerNet-MVFouls, a new multi-view video dataset containing video clips of fouls captured by multiple cameras, annotated with 10 properties.
+ * the code for the VARS, a new multi-camera video recognition system for classifying the type of fouls and their severity.
+ * my updated version of the VARS interface, which shows the ground truth of the action and the top 2 predictions for the foul classification task, and the offence and severity classification task with the corresponding confidence scores.
 
-![My Image](images/abstract_image.jpg)
+Note: I've chosen to omit the ground truth of the action in the updated UI, since this data would not be available in a live implementation. 
+
 ## SoccerNet-MVFouls
 
 Follow the [link](https://pypi.org/project/SoccerNet/) to easily download the SoccerNet pip package.
@@ -33,8 +29,6 @@ The dataset will be available at 720p soon!
 
 The dataset consists of 3901 available actions. Each action is composed of at least two videos depicting the live action and at least one replay. 
 The dataset is divided into a training set (2916 actions), validation set (411 actions), test set (301 actions) and challenge set (273 actions without the annotations).
-
-![My Image](images/dataset_example.png)
 
 The actions are annotated with 10 different properties describing the characteristics of the foul from a referee
 perspective (e.g. the severity of the foul, the type of foul,
@@ -99,7 +93,7 @@ Then select one or several clips in the folder "Dataset".
 ## Demo
 The VARS gives his top two predictions with the corresponding confidence score.
 
-
+![HARRY MAGUIRE](https://github.com/ghchen99/VARS/assets/56446026/8cdb8a88-c19d-4fdc-b754-3d2872dff9bc)
 
 ## License
 See the [License](LICENSE) file for details.
