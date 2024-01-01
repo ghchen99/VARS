@@ -1,6 +1,6 @@
 
 
-# AI Video Assistant Referee - Decision Classification
+# AI Video Assistant Referee - Let's Save VAR
 
 The Video Assistant Referee (VAR) has revolutionized association football, enabling referees to review incidents on the pitch, making informed decisions, and ensuring fairness. However, due to the lack of referees in many countries and the high cost of the VAR infrastructure, only professional leagues can benefit from it. 
 We propose a first step towards a fully automated “Video Assistant Referee System” (VARS) which could support or replace the current VAR.
