@@ -1,6 +1,8 @@
 # AI Video Assistant Referee - Let's Save VAR!
 
-This repository is forked from https://github.com/SoccerNet/VARS. If you're looking for technical implementation details and academic background, I invite you to explore the paper published by Jan Held et al. "VARS: Video Assistant Referee System for Automated Soccer Decision Making from Multiple Views". 
+This repository is forked from https://github.com/SoccerNet/VARS. 
+
+If you're looking for technical implementation details and academic background, I invite you to explore the paper published by Jan Held et al. "VARS: Video Assistant Referee System for Automated Soccer Decision Making from Multiple Views". 
 
 For more information
 * Paper: [VARS: Video Assistant Referee System for Automated Soccer Decision Making from Multiple Views](https://arxiv.org/abs/2304.04617).
@@ -10,7 +12,7 @@ This repository contains:
  * the code for the VARS, a new multi-camera video recognition system for classifying the type of fouls and their severity.
  * my updated version of the VARS interface, which shows the ground truth of the action and the top 2 predictions for the foul classification task, and the offence and severity classification task with the corresponding confidence scores.
 
-Note: I've chosen to omit the ground truth of the action in the updated UI, since this data would not be available in a live implementation. 
+Note: I've chosen to omit the ground truth of the action in the updated UI, since this data would not be available in a live situation.
 
 ## SoccerNet-MVFouls
 
@@ -35,13 +37,8 @@ perspective (e.g. the severity of the foul, the type of foul,
 etc.). \
 To ensure high-quality annotations, all these properties were manually annotated by a professional soccer referee with 6 years of experience and more than 300 official
 games.
+
 ## VARS
-
-Our VARS is a multi-view multi-task video architecture, that automatically identifies the type of foul and their severity. 
-
-![My Image](images/pipeline_mvfoul.jpg)
-
-Our system encodes per-view video features (E), aggregates the view features (A), and classifies different properties of the foul action (C).
 
 Run the following lines to install all the dependencies:
 ```
@@ -62,12 +59,7 @@ python main.py --path "path/to/dataset"
 
 ## VARS interface
 
-The VARS interface enables easy access to all available
-perspectives for a particular action. The multi-task VARS,
-which achieved the best results on the test set, is built directly into the interface, allowing for immediate analysis of
-selected videos. The VARS interface offers top two predictions for the type of foul classification, as well as the offense and severity classification for the selected videos. Furthermore, for each prediction, the VARS interface shows the confidence score of his prediction.
-
-![My Image](images/vars_interface.png)
+<img width="1666" alt="Screenshot 2024-01-01 at 16 53 37" src="https://github.com/ghchen99/VARS/assets/56446026/52d51fd0-771d-4147-9912-7bb87cf15cb6">
 
 Run the following lines to instal all the dependencies
 ```
@@ -97,8 +89,6 @@ The VARS gives his top two predictions with the corresponding confidence score.
 
 ## License
 See the [License](LICENSE) file for details.
-
-
 
 ## Citation
 
